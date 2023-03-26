@@ -49,17 +49,17 @@ extension MastodonMetaContent {
                 )
                 metaEntities.append(entity)
             case .hashtag:
-                var userInfo: [AnyHashable: Any] = [:]
-                node.href.flatMap { href in
-                    userInfo["href"] = href
-                }
-                let string = String(node.text)
-                let hashtag = string.deletingPrefix("#")
-                let entity = Meta.Entity(
-                    range: range,
-                    meta: .hashtag(string, hashtag: hashtag, userInfo: userInfo)
-                )
-                metaEntities.append(entity)
+                // var userInfo: [AnyHashable: Any] = [:]
+                // node.href.flatMap { href in
+                //     userInfo["href"] = href
+                // }
+                // let string = String(node.text)
+                // let hashtag = string.deletingPrefix("#")
+                // let entity = Meta.Entity(
+                //     range: range,
+                //     meta: .hashtag(string, hashtag: hashtag, userInfo: userInfo)
+                // )
+                // metaEntities.append(entity)
             case .mention:
                 var userInfo: [AnyHashable: Any] = [:]
                 node.href.flatMap { href in
